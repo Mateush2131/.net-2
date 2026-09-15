@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "AJAX Форма";
+}
+
+<h2>Форма обратной связи (AJAX)</h2>
+
+<form id="contactForm" method="post">
+    @Html.AntiForgeryToken()
+    <div><label>Имя:</label><input type="text" name="Name" id="Name" /></div>
+    <div><label>Email:</label><input type="email" name="Email" id="Email" /></div>
+    <div><label>Сообщение:</label><textarea name="Message" id="Message"></textarea></div>
+    <button type="submit">Отправить</button>
+</form>
+
+<div id="result" style="margin-top:20px;"></div>
+<script src="~/js/form.js"></script>
